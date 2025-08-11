@@ -11,3 +11,10 @@ Return the release name plus chart name for full resource name
 {{- define "nginx.fullname" -}}
 {{- printf "%s-%s" .Release.Name .Chart.Name | trunc 63 | trimSuffix "-" -}}
 {{- end -}}
+
+{{/*
+Create a fully qualified name.
+*/}}
+{{- define "postgres.fullname" -}}
+{{- printf "%s-%s" .Release.Name .Chart.Name | trunc 63 | trimSuffix "-" -}}
+{{- end -}}
