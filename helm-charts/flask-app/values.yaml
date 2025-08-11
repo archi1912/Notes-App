@@ -1,5 +1,5 @@
 image:
-  repository: your-dockerhub-username/flask-app
+  repository: archi1912/notes-app
   tag: latest
   pullPolicy: IfNotPresent
 
