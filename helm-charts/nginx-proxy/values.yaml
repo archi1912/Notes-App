@@ -1,0 +1,22 @@
+replicaCount: 1
+
+image:
+  repository: nginx
+  tag: "1.25.4"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8080
+  targetPort: 80
+
+nginxConfig: |
+  server {
+      listen 80;
+      location / {
+          root /usr/share/nginx/html;
+          index index.html;
+      }
+  }
+
+resources: {}

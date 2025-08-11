@@ -1,0 +1,14 @@
+image:
+  repository: archi1912/notes-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  port: 5000
+
+env:
+  POSTGRES_HOST: db
+  POSTGRES_PORT: 5432
+  POSTGRES_DB: notesdb
+  POSTGRES_USER: postgres
+  POSTGRES_PASSWORD: postgres
