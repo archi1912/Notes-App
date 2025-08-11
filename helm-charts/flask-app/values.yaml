@@ -5,3 +5,6 @@ image:
 
 flask:
   containerPort: 5000
+
+service:
+  port: 5000
