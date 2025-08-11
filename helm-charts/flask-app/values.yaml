@@ -1,4 +1,7 @@
+image:
+  repository: your-dockerhub-username/flask-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
 flask:
   containerPort: 5000
-  image: your-dockerhub-username/flask-app
-  tag: latest
