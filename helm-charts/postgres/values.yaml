@@ -12,7 +12,7 @@ postgresPassword: postgres
 postgresDb: notesdb
 
 persistence:
-  enabled: true
+  enabled: false
   storageClass: ""
   accessModes:
     - ReadWriteOnce
