@@ -10,7 +10,7 @@ service:
   port: 5000
 
 env:
-  POSTGRES_HOST: db
+  POSTGRES_HOST: notes-postgres-postgres.notes-postgres.svc.cluster.local
   POSTGRES_PORT: "5432"
   POSTGRES_USER: postgres
   POSTGRES_PASSWORD: postgres
