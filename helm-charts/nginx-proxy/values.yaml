@@ -1,26 +1,13 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  tag: "1.25.4"
+  repository: archi1912/notes-proxy
+  tag: latest
   pullPolicy: IfNotPresent
 
 service:
   type: ClusterIP
-  port: 8080
-  targetPort: 80
-
-nginxConfig: |
-  server {
-      listen 80;
-
-      location / {
-          proxy_pass http://flask.notes-web.svc.cluster.local:5000;
-          proxy_set_header Host $host;
-          proxy_set_header X-Real-IP $remote_addr;
-          proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-          proxy_set_header X-Forwarded-Proto $scheme;
-      }
-  }
+  port: 8080       
+  targetPort: 80   
 
 resources: {}
