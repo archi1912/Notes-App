@@ -26,3 +26,6 @@ spec:
         - name: nginx-config
           configMap:
             name: {{ include "nginx.fullname" . }}-config
+          items:
+            - key: default.conf
+              path: default.conf
