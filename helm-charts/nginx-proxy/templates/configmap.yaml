@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: {{ include "nginx.fullname" . }}-config
 data:
-  default.conf: |
+  default.conf: |-
 {{ .Values.nginxConfig | indent 4 }}
