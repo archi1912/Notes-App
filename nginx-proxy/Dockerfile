@@ -1,9 +1,8 @@
-FROM ubuntu:latest
+FROM nginx:1.25.4
 
-RUN apt-get update && \
-     apt install -y nginx
+RUN rm /etc/nginx/conf.d/default.conf
 
-COPY nginx.conf /etc/nginx/sites-available/default
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 8080
 
 CMD ["nginx", "-g", "daemon off;"]
